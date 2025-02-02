@@ -6,7 +6,7 @@ import { getLiveStreamerIds } from './scripts/getStreamerIds.js';
 import StreamFetcher from './streamFetcher.js';
 import {compareAgainstStreamers} from "./scripts/embeddings/compareAgainstStreamers.js";
 // import database from './database.js';
-import { claudeEndpointForClient } from './scripts/claudeEndpointForClient.js';
+// import { claudeEndpointForClient } from './scripts/claudeEndpointForClient.js';
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -78,10 +78,10 @@ app.get('/project/:projectId', async (req, res) => {
     }
 })
 
-app.get('/claude/:prompt', async (req, res) => {
-    const result = await claudeEndpointForClient(req.params["prompt"]);
-    res.json(result);
-})
+// app.get('/claude/:prompt', async (req, res) => {
+//     const result = await claudeEndpointForClient(req.params["prompt"]);
+//     res.json(result);
+// })
 
 // StreamFetcher();
 

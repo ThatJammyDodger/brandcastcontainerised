@@ -1,0 +1,25 @@
+{
+  "name": "brandcast-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "API for the Brandcast website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./render-build.sh",
+    "start": "npx puppeteer browsers install chrome && node main.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.2.0",
+    "firebase-admin": "^13.0.2",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.1.1",
+    "sharp": "^0.33.5"
+  }
+}

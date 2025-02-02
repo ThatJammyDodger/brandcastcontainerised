@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./brandcast-api
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./brandcast-api/.env
+    volumes:
+      - ./brandcast-api:/app
+      - /app/node_modules
+
+# see readme
+  # frontend:
+  #   build: ./brandcast
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   env_file:
+  #     - ./brandcast/.env
+  #   volumes:
+  #     - ./brandcast:/app
+  #     - /app/node_modules
+  
